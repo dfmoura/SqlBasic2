@@ -1,0 +1,2122 @@
+https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all&comments=1
+
+
+
+1) Contar o total de clientes:
+
+
+SELECT
+
+COUNT(CustomerID) AS "Total de Clientes"
+
+FROM Customers;
+
+
+Total de Clientes
+
+91
+
+
+
+2) Contar o total de clientes por país:
+
+SELECT
+
+Country,
+
+COUNT(CustomerID)
+
+FROM Customers
+
+GROUP BY Country
+
+ORDER BY Country
+
+
+
+Country
+
+COUNT(CustomerID)
+
+Argentina
+
+3
+
+Austria
+
+2
+
+Belgium
+
+2
+
+Brazil
+
+9
+
+Canada
+
+3
+
+Denmark
+
+2
+
+Finland
+
+2
+
+France
+
+11
+
+Germany
+
+11
+
+Ireland
+
+1
+
+Italy
+
+3
+
+Mexico
+
+5
+
+Norway
+
+1
+
+Poland
+
+1
+
+Portugal
+
+2
+
+Spain
+
+5
+
+Sweden
+
+2
+
+Switzerland
+
+2
+
+UK
+
+7
+
+USA
+
+13
+
+Venezuela
+
+4
+
+
+
+2) Contar o total de clientes por país e por cidade, ordenando por país e cidade:
+
+SELECT
+
+Country,
+
+COUNT(Country),
+
+City,
+
+COUNT(City)
+
+FROM Customers
+
+GROUP BY City
+
+ORDER BY Country, City
+
+
+
+Country
+
+COUNT(Country)
+
+City
+
+COUNT(City)
+
+Argentina
+
+3
+
+Buenos Aires
+
+3
+
+Austria
+
+1
+
+Graz
+
+1
+
+Austria
+
+1
+
+Salzburg
+
+1
+
+Belgium
+
+1
+
+Bruxelles
+
+1
+
+Belgium
+
+1
+
+Charleroi
+
+1
+
+Brazil
+
+1
+
+Campinas
+
+1
+
+Brazil
+
+1
+
+Resende
+
+1
+
+Brazil
+
+3
+
+Rio de Janeiro
+
+3
+
+Brazil
+
+4
+
+São Paulo
+
+4
+
+Canada
+
+1
+
+Montréal
+
+1
+
+Canada
+
+1
+
+Tsawassen
+
+1
+
+Canada
+
+1
+
+Vancouver
+
+1
+
+Denmark
+
+1
+
+København
+
+1
+
+Denmark
+
+1
+
+Århus
+
+1
+
+
+
+2) Contar o total de clientes por país e por cidade, filtrando cidades com mais de 1 cliente e ordenando por país e cidade:
+
+SELECT
+
+Country,
+
+COUNT(Country),
+
+City,
+
+COUNT(City)
+
+FROM Customers
+
+GROUP BY City
+
+HAVING COUNT(City)>1
+
+ORDER BY Country, City
+
+
+Country
+
+COUNT(Country)
+
+City
+
+COUNT(City)
+
+Argentina
+
+3
+
+Buenos Aires
+
+3
+
+Brazil
+
+3
+
+Rio de Janeiro
+
+3
+
+Brazil
+
+4
+
+São Paulo
+
+4
+
+France
+
+2
+
+Nantes
+
+2
+
+France
+
+2
+
+Paris
+
+2
+
+Mexico
+
+5
+
+México D.F.
+
+5
+
+Portugal
+
+2
+
+Lisboa
+
+2
+
+Spain
+
+3
+
+Madrid
+
+3
+
+UK
+
+6
+
+London
+
+6
+
+USA
+
+2
+
+Portland
+
+2
+
+
+Qual o total de funcionários?
+
+SELECT
+
+COUNT(EmployeeID) AS "Total de Funcionários"
+
+FROM [Employees]
+
+
+Total de Funcionários
+
+10
+
+
+
+Multiplos filtros. (clientes de SP ou RJ com idade acima de 30)
+
+Calculos matemáticos e estatisticos (média de idade de uma turma)
+
+Filtros aproximados (pacientes que contenham joao no nome)
+
+multiplas agregações (agrupar produtos por fornecedores e transportadores)
+
+
+Construção de consultas:
+
+1) em que tabelas estão os dados necessários?
+
+2) você precisa de todas as linhas ou precisa de um filtro?
+
+3) você precisa de todas as colunas ou somente de algumas?
+
+
+Consultar cpf e nome dos clientes do sexo feminido, com idade acima de 20 anos:
+
+1) em que tabelas estão os dados necessários? Tabela de clientes.
+
+2) você precisa de todas as linhas ou precisa de um filtro? Dois filtros: sexo e idade.
+
+3) você precisa de todas as colunas ou somente de algumas? Somente duas colunas: cpf e nome.
+
+
+
+
+
+
+Filtros aproximados
+
+
+Caracteres coringa
+
+% - substitui qualquer caractere em qualquer quantidade
+
+_ - substitui um caractere qualquer (somente um!)
+
+[xxx] – alternativa, qualquer um dentro de colchetes
+
+
+% é o mais utilizados
+
+
+Ex.: selecionar nomes de clientes que tenham ‘Madalena’ no endereço
+
+SELECT nome
+
+FROM clientes
+
+WHERE endereço LIKE ‘%Madalena%’
+
+
+Ex.: selecionar nome e cpf de alunos com 2a letra igual a ‘o’
+
+SELECT *
+
+FROM alunos
+
+WHERE nome LIKE ‘_o%’
+
+
+Ex.: selecionar nome e idade de alunos começando com M ou L
+
+SELECT *
+
+FROM alunos
+
+WHERE nome LIKE ‘[ML]%’
+
+
+1) Países que começam com a letra a:
+
+SELECT *
+
+FROM Customers
+
+WHERE Country LIKE 'A%'
+
+CustomerID
+
+CustomerName
+
+ContactName
+
+Address
+
+City
+
+PostalCode
+
+Country
+
+12
+
+Cactus Comidas para llevar
+
+Patricio Simpson
+
+Cerrito 333
+
+Buenos Aires
+
+1010
+
+Argentina
+
+20
+
+Ernst Handel
+
+Roland Mendel
+
+Kirchgasse 6
+
+Graz
+
+8010
+
+Austria
+
+54
+
+Océano Atlántico Ltda.
+
+Yvonne Moncada
+
+Ing. Gustavo Moncada 8585 Piso 20-A
+
+Buenos Aires
+
+1010
+
+Argentina
+
+59
+
+Piccolo und mehr
+
+Georg Pipps
+
+Geislweg 14
+
+Salzburg
+
+5020
+
+Austria
+
+64
+
+Rancho grande
+
+Sergio Gutiérrez
+
+Av. del Libertador 900
+
+Buenos Aires
+
+1010
+
+Argentina
+
+
+2) Consultar clientes cujos países tem a na segunda letra.
+
+SELECT *
+
+FROM Customers
+
+WHERE Country LIKE ‘_a%’
+
+
+CustomerID
+
+CustomerName
+
+ContactName
+
+Address
+
+City
+
+PostalCode
+
+Country
+
+10
+
+Bottom-Dollar Marketse
+
+Elizabeth Lincoln
+
+23 Tsawassen Blvd.
+
+Tsawassen
+
+T2F 8M4
+
+Canada
+
+42
+
+Laughing Bacchus Wine Cellars
+
+Yoshi Tannamuri
+
+1900 Oak St.
+
+Vancouver
+
+V3F 2K1
+
+Canada
+
+51
+
+Mère Paillarde
+
+Jean Fresnière
+
+43 rue St. Laurent
+
+Montréal
+
+H1J 1C3
+
+Canada
+
+
+3) Consultar os produtos que possui “Guaraná” na descrição
+
+SELECT *
+
+FROM Products
+
+WHERE ProductName LIKE '%Guaraná%'
+
+
+ProductID
+
+ProductName
+
+SupplierID
+
+CategoryID
+
+Unit
+
+Price
+
+24
+
+Guaraná Fantástica
+
+10
+
+1
+
+12 - 355 ml cans
+
+4.5
+
+
+
+4) Consultar todos os clientes da cidade (city) de São Paulo e que tenham contato com um nome de ‘Pedro’ (tabela customers)? Utilizar LIKE para pesquisa aproximada.
+
+SELECT *
+
+FROM Customers
+
+WHERE City = 'São Paulo' AND ContactName LIKE '%Pedro%';
+
+
+CustomerID
+
+CustomerName
+
+ContactName
+
+Address
+
+City
+
+PostalCode
+
+Country
+
+15
+
+Comércio Mineiro
+
+Pedro Afonso
+
+Av. dos Lusíadas, 23
+
+São Paulo
+
+05432-043
+
+Brazil
+
+
+
+Funções matemáticas
+
+1) Contar o número de linha considerando as linhas nulas.
+
+SELECT
+
+COUNT(*) AS 'Total de Clientes'
+
+FROM Customers;
+
+
+Total de Clientes
+
+91
+
+
+
+2) Contar o número de linha NÃO considerando as linhas nulas.
+
+SELECT
+
+COUNT(CustomerID) AS 'Total de Clientes'
+
+FROM Customers;
+
+
+Total de Clientes
+
+91
+
+*Neste caso retornou o mesmo valor pois na coluna não tinha nenhum valor nulo.
+
+
+
+3) Com o DISTINCT podemos contar os valore únicos.
+
+SELECT
+
+COUNT(DISTINCT Country)
+
+FROM Customers;
+
+
+COUNT(DISTINCT Country)
+
+21
+
+
+4) AVG calcula a média da coluna selecionada
+
+O avg ignora valores nulos para calcular a média
+
+MAX
+
+MIN
+
+
+SELECT *
+
+AVG(Price),
+
+MAX(Price),
+
+MIN(Price)
+
+FROM Products
+
+
+AVG(Price)
+
+MAX(Price)
+
+MIN(Price)
+
+28.866363636363637
+
+263.5
+
+2.5
+
+
+
+Desvio Padrão
+
+
+
+1) Qual a quantidade de clientes
+
+SELECT
+
+COUNT(*) AS 'Total de Clientes'
+
+FROM Customers;
+
+
+Total de Clientes
+
+91
+
+
+
+2) Qual é a quantidade de países na tabela clientes?
+
+SELECT
+
+COUNT(DISTINCT Country)
+
+FROM Customers;
+
+
+COUNT(DISTINCT Country)
+
+21
+
+
+
+
+
+
+
+
+
+
+
+
+4) AVG calcula a média da coluna selecionada
+
+O avg ignora valores nulos para calcular a média
+
+MAX
+
+MIN
+
+
+SELECT *
+
+AVG(Price),
+
+MAX(Price),
+
+MIN(Price)
+
+FROM Products
+
+
+AVG(Price)
+
+MAX(Price)
+
+MIN(Price)
+
+28.866363636363637
+
+263.5
+
+2.5
+
+
+
+5) Consultar a quantidade de clientes de cada país. O resultado deverá ter o nome do país e a quantidade de clientes em ordem decrescente de número de clientes (tabela customers).
+
+SELECT Country, Count(Country)
+
+FROM Customers
+
+GROUP BY Country
+
+ORDER BY COUNT(*) DESC, Country
+
+Country
+
+Count(Country)
+
+USA
+
+13
+
+France
+
+11
+
+Germany
+
+11
+
+Brazil
+
+9
+
+UK
+
+7
+
+Mexico
+
+5
+
+Spain
+
+5
+
+Venezuela
+
+4
+
+Argentina
+
+3
+
+Canada
+
+3
+
+Italy
+
+3
+
+Austria
+
+2
+
+Belgium
+
+2
+
+Denmark
+
+2
+
+Finland
+
+2
+
+Portugal
+
+2
+
+Sweden
+
+2
+
+Switzerland
+
+2
+
+Ireland
+
+1
+
+Norway
+
+1
+
+Poland
+
+1
+
+
+
+Comando DISTINCT
+
+OR, OR, OR….. utilizar o IN
+
+JOIN
+
+
+1) consultar linhas sem duplicadas
+
+SELECT DISTINCT *
+
+FROM Customers
+
+ORDER BY Address
+
+
+2) Consultar clientes do Brazil, USA e Germany.
+
+SELECT *
+
+FROM Customers
+
+WHERE Country IN ('USA','Germany','Brazil')
+
+ORDER BY Country
+
+
+CustomerID
+
+CustomerName
+
+ContactName
+
+Address
+
+City
+
+PostalCode
+
+Country
+
+15
+
+Comércio Mineiro
+
+Pedro Afonso
+
+Av. dos Lusíadas, 23
+
+São Paulo
+
+05432-043
+
+Brazil
+
+21
+
+Familia Arquibaldo
+
+Aria Cruz
+
+Rua Orós, 92
+
+São Paulo
+
+05442-030
+
+Brazil
+
+31
+
+Gourmet Lanchonetes
+
+André Fonseca
+
+Av. Brasil, 442
+
+Campinas
+
+04876-786
+
+Brazil
+
+34
+
+Hanari Carnes
+
+Mario Pontes
+
+Rua do Paço, 67
+
+Rio de Janeiro
+
+05454-876
+
+Brazil
+
+61
+
+Que Delícia
+
+Bernardo Batista
+
+Rua da Panificadora, 12
+
+Rio de Janeiro
+
+02389-673
+
+Brazil
+
+62
+
+Queen Cozinha
+
+Lúcia Carvalho
+
+Alameda dos Canàrios, 891
+
+São Paulo
+
+05487-020
+
+Brazil
+
+67
+
+Ricardo Adocicados
+
+Janete Limeira
+
+Av. Copacabana, 267
+
+Rio de Janeiro
+
+02389-890
+
+Brazil
+
+81
+
+Tradição Hipermercados
+
+Anabela Domingues
+
+Av. Inês de Castro, 414
+
+São Paulo
+
+05634-030
+
+Brazil
+
+88
+
+Wellington Importadora
+
+Paula Parente
+
+Rua do Mercado, 12
+
+Resende
+
+08737-363
+
+Brazil
+
+1
+
+Alfreds Futterkiste
+
+Maria Anders
+
+Obere Str. 57
+
+Berlin
+
+12209
+
+Germany
+
+6
+
+Blauer See Delikatessen
+
+Hanna Moos
+
+Forsterstr. 57
+
+Mannheim
+
+68306
+
+Germany
+
+17
+
+Drachenblut Delikatessend
+
+Sven Ottlieb
+
+Walserweg 21
+
+Aachen
+
+52066
+
+Germany
+
+25
+
+Frankenversand
+
+Peter Franken
+
+Berliner Platz 43
+
+München
+
+80805
+
+Germany
+
+39
+
+Königlich Essen
+
+Philip Cramer
+
+Maubelstr. 90
+
+Brandenburg
+
+14776
+
+Germany
+
+44
+
+Lehmanns Marktstand
+
+Renate Messner
+
+Magazinweg 7
+
+Frankfurt a.M.
+
+60528
+
+Germany
+
+52
+
+Morgenstern Gesundkost
+
+Alexander Feuer
+
+Heerstr. 22
+
+Leipzig
+
+04179
+
+Germany
+
+56
+
+Ottilies Käseladen
+
+Henriette Pfalzheim
+
+Mehrheimerstr. 369
+
+Köln
+
+50739
+
+Germany
+
+63
+
+QUICK-Stop
+
+Horst Kloss
+
+Taucherstraße 10
+
+Cunewalde
+
+01307
+
+Germany
+
+79
+
+Toms Spezialitäten
+
+Karin Josephs
+
+Luisenstr. 48
+
+Münster
+
+44087
+
+Germany
+
+86
+
+Die Wandernde Kuh
+
+Rita Müller
+
+Adenauerallee 900
+
+Stuttgart
+
+70563
+
+Germany
+
+32
+
+Great Lakes Food Market
+
+Howard Snyder
+
+2732 Baker Blvd.
+
+Eugene
+
+97403
+
+USA
+
+36
+
+Hungry Coyote Import Store
+
+Yoshi Latimer
+
+City Center Plaza 516 Main St.
+
+Elgin
+
+97827
+
+USA
+
+43
+
+Lazy K Kountry Store
+
+John Steel
+
+12 Orchestra Terrace
+
+Walla Walla
+
+99362
+
+USA
+
+45
+
+Let's Stop N Shop
+
+Jaime Yorres
+
+87 Polk St. Suite 5
+
+San Francisco
+
+94117
+
+USA
+
+48
+
+Lonesome Pine Restaurant
+
+Fran Wilson
+
+89 Chiaroscuro Rd.
+
+Portland
+
+97219
+
+USA
+
+55
+
+Old World Delicatessen
+
+Rene Phillips
+
+2743 Bering St.
+
+Anchorage
+
+99508
+
+USA
+
+65
+
+Rattlesnake Canyon Grocery
+
+Paula Wilson
+
+2817 Milton Dr.
+
+Albuquerque
+
+87110
+
+USA
+
+71
+
+Save-a-lot Markets
+
+Jose Pavarotti
+
+187 Suffolk Ln.
+
+Boise
+
+83720
+
+USA
+
+75
+
+Split Rail Beer & Ale
+
+Art Braunschweiger
+
+P.O. Box 555
+
+Lander
+
+82520
+
+USA
+
+77
+
+The Big Cheese
+
+Liz Nixon
+
+89 Jefferson Way Suite 2
+
+Portland
+
+97201
+
+USA
+
+78
+
+The Cracker Box
+
+Liu Wong
+
+55 Grizzly Peak Rd.
+
+Butte
+
+59801
+
+USA
+
+82
+
+Trail's Head Gourmet Provisioners
+
+Helvetius Nagy
+
+722 DaVinci Blvd.
+
+Kirkland
+
+98034
+
+USA
+
+89
+
+White Clover Markets
+
+Karl Jablonski
+
+305 - 14th Ave. S. Suite 3B
+
+Seattle
+
+98128
+
+USA
+
+
+
+
+
+
+
+
+
+
+
+
+
+Junção
+
+Entender que existe uma correlação semantica que junta parte de uma tabela em outra referenciada por um campo especifico.
+
+SELECT *
+
+FROM tabela1 JOIN tabela2 ON tabela1.id_x = tabela2.id_y
+
+
+Exemplo:
+
+Consultar o nome de todos os produtos e quantidades em todas as compras registradas
+
+01) em que tabelas estão os dados necessários? Tabela compras e produtos.
+
+02) você precisa de todas as linhas ou precisa de um filtro? Quero todas as linhas, não tem filtro.
+
+03) você precisa de todas as colunas ou somente de algumas? Só duas colunas: nome do produto e a quantidade.
+
+
+SELECT produtos.nome, compras.quantidade
+
+FROM compras JOIN produtos ON compras.id_produto = produtos.id
+
+
+
+-- perceba que o nome da coluna tem prefixo agora!
+
+-- como podemos ter colunas de mesmo nome em tabelas diferentes
+
+-- é importante sempre indicar a tabela à qual a coluna pertence
+
+
+Agora o nome dos produtos para cada compra registrada no nome do cliente “Leoncio”.
+
+
+
+
+JOIN com tres tabelas.
+
+SELECT produtos.nome, compras.quantidade
+
+FROM compras
+
+JOIN produtos ON compras.id_produtos = produtos.id
+
+JOIN clientes ON compras.id_cliente = clientes.id
+
+WHERES clientes.nome = “Leoncio”
+
+
+
+SELECT
+
+OrderDetails.OrderDetailID,
+
+OrderDetails.OrderID,
+
+OrderDetails.ProductID,
+
+Products.ProductName
+
+FROM OrderDetails
+
+JOIN Products ON OrderDetails.ProductID = Products.ProductID
+
+
+
+JUNÇÃO
+
+
+SELECT
+
+Customers.CustomerName,
+
+OrderDetails.Quantity
+
+
+FROM Orders
+
+JOIN OrderDetails ON Orders.OrderID = OrderDetails.OrderID
+
+JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+
+GROUP BY Customers.CustomerName
+
+
+
+CustomerName
+
+Quantity
+
+Ana Trujillo Emparedados y helados
+
+1
+
+Antonio Moreno Taquería
+
+24
+
+Around the Horn
+
+25
+
+B's Beverages
+
+30
+
+Berglunds snabbköp
+
+16
+
+Blondel père et fils
+
+30
+
+Bon app'
+
+15
+
+Bottom-Dollar Marketse
+
+16
+
+Bólido Comidas preparadas
+
+24
+
+Centro comercial Moctezuma
+
+10
+
+Chop-suey Chinese
+
+15
+
+Comércio Mineiro
+
+20
+
+Consolidated Holdings
+
+10
+
+Die Wandernde Kuh
+
+10
+
+Drachenblut Delikatessend
+
+20
+
+Du monde entier
+
+6
+
+Eastern Connection
+
+30
+
+Ernst Handel
+
+50
+
+Familia Arquibaldo
+
+10
+
+Folies gourmandes
+
+10
+
+Folk och fä HB
+
+35
+
+Franchi S.p.A.
+
+2
+
+Frankenversand
+
+50
+
+Furia Bacalhau e Frutos do Mar
+
+9
+
+GROSELLA-Restaurante
+
+10
+
+
+INNER JOIN = TRAZ SOMENTE AS INTERSECÇÃO
+
+LEFT JOIN = TRAZ TODOS, INDEPENDENTE SE TIVER ZERO
+
+
+
+
+
+Consultar os números das ordens, primeiros e últimos nomes dos empregados que fizeram cada ordem (tabelas Employees e Orders)
+
+
+SELECT Orders.OrderID, Employees.FirstName, Employees.LastName
+
+FROM Orders
+
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+
+
+
+OrderID
+
+FirstName
+
+LastName
+
+10248
+
+Steven
+
+Buchanan
+
+10249
+
+Michael
+
+Suyama
+
+10250
+
+Margaret
+
+Peacock
+
+10251
+
+Janet
+
+Leverling
+
+10252
+
+Margaret
+
+Peacock
+
+10253
+
+Janet
+
+Leverling
+
+10254
+
+Steven
+
+Buchanan
+
+10255
+
+Anne
+
+Dodsworth
+
+10256
+
+Janet
+
+Leverling
+
+10257
+
+Margaret
+
+Peacock
+
+10258
+
+Nancy
+
+Davolio
+
+10259
+
+Margaret
+
+Peacock
+
+10260
+
+Margaret
+
+Peacock
+
+
+
+--Consultar os nomes dos produtos e suas respectivas categorias (tabelas Products e Categories)
+
+
+SELECT
+
+Products.ProductName,
+
+Categories.CategoryName
+
+FROM Products
+
+LEFT JOIN Categories ON Products.CategoryID = Categories.CategoryID
+
+
+
+ProductName
+
+CategoryName
+
+Chais
+
+Beverages
+
+Chang
+
+Beverages
+
+Aniseed Syrup
+
+Condiments
+
+Chef Anton's Cajun Seasoning
+
+Condiments
+
+Chef Anton's Gumbo Mix
+
+Condiments
+
+Grandma's Boysenberry Spread
+
+Condiments
+
+Uncle Bob's Organic Dried Pears
+
+Produce
+
+Northwoods Cranberry Sauce
+
+Condiments
+
+Mishi Kobe Niku
+
+Meat/Poultry
+
+Ikura
+
+Seafood
+
+Queso Cabrales
+
+Dairy Products
+
+Queso Manchego La Pastora
+
+Dairy Products
+
+Konbu
+
+Seafood
+
+Tofu
+
+Produce
+
+Genen Shouyu
+
+Condiments
+
+Pavlova
+
+Confections
+
+Alice Mutton
+
+Meat/Poultry
+
+
+
+--Consultar os ids das ordens com os nomes e telefones dos transportadores (tabela Orders e Shippers)
+
+SELECT
+
+Orders.OrderID,
+
+Shippers.ShipperName,
+
+Shippers.Phone
+
+FROM Orders
+
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+
+
+
+--Consultar quantidade de ordens de cada um dos empregados. O resultado deve ter o nome do empregado e a quantidade de ordens. Mesmo os empregados que não tem ordens devem estar no resultado (tabelas Orders e Employee)
+
+
+SELECT
+
+Employees.FirstName,
+
+COUNT(Orders.OrderID)
+
+FROM Employees
+
+LEFT JOIN Orders On Employees.EmployeeID = Orders.EmployeeID
+
+GROUP BY Employees.FirstName
+
+
+FirstName
+
+COUNT(Orders.OrderID)
+
+Adam
+
+0
+
+Andrew
+
+20
+
+Anne
+
+6
+
+Janet
+
+31
+
+Laura
+
+27
+
+Margaret
+
+40
+
+Michael
+
+18
+
+Nancy
+
+29
+
+Robert
+
+14
+
+Steven
+
+11
+
+
+
+
+
+
+
+
+
+-- Consultar os números de ordens, primeiros e últimos nomes dos empregados que tenham "A" como primeira letra do nome. Utilizar subconsulta como tabela de empregados com letra A (tabelas Employees e Orders)
+
+
+SELECT
+
+Orders.OrderID,
+
+empregados_com_a.FirstName,
+
+empregados_com_a.LastName
+
+FROM Orders
+
+JOIN (SELECT * FROM Employees WHERE FirstName LIKE 'A%') AS empregados_com_a ON Orders.EmployeeID = empregados_com_a.EmployeeID
+
+
+
+OrderID
+
+FirstName
+
+LastName
+
+10255
+
+Anne
+
+Dodsworth
+
+10263
+
+Anne
+
+Dodsworth
+
+10265
+
+Andrew
+
+Fuller
+
+10277
+
+Andrew
+
+Fuller
+
+10280
+
+Andrew
+
+Fuller
+
+10295
+
+Andrew
+
+Fuller
+
+10300
+
+Andrew
+
+Fuller
+
+
+
+JUNÇÃO É COM COLUNA
+
+UNIAO É COM LINHA
+
+
+
+-- Consultar os números de ordens, primeiros e últimos nomes dos empregados que tenham "A" como primeira letra do nome. Utilizar subconsulta como tabela de empregados com letra F (tabelas Employees e Orders)
+
+
+WITH
+
+empregados_com_A AS (SELECT * FROM Employees WHERE FirstName LIKE 'A%'),
+
+produtos_com_A AS (SELECT * FROM Products WHERE ProductName LIKE 'A%'),
+
+produtos_com_P AS (SELECT * FROM Products WHERE ProductName LIKE 'P%')
+
+SELECT *
+
+FROM produtos_com_A
+
+UNION
+
+SELECT *
+
+FROM produtos_com_P;
+
+
+
+ProductID
+
+ProductName
+
+SupplierID
+
+CategoryID
+
+Unit
+
+Price
+
+3
+
+Aniseed Syrup
+
+1
+
+2
+
+12 - 550 ml bottles
+
+10
+
+16
+
+Pavlova
+
+7
+
+3
+
+32 - 500 g boxes
+
+17.45
+
+17
+
+Alice Mutton
+
+7
+
+6
+
+20 - 1 kg tins
+
+39
+
+53
+
+Perth Pasties
+
+24
+
+6
+
+48 pieces
+
+32.8
+
+55
+
+Pâté chinois
+
+25
+
+6
+
+24 boxes x 2 pies
+
+24
+
+
+
+
+CREATE TABLE empregados_com_a AS
+
+SELECT *
+
+FROM Employees
+
+WHERE FirstName LIKE 'A%'
