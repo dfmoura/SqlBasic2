@@ -1,0 +1,3288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
+	<meta name="created" content="2023-02-13T09:39:15.704239442"/>
+	<meta name="changed" content="2023-02-13T21:25:03.466036505"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin-left: 0.77cm; margin-right: 1.23cm; margin-top: 0.56cm; margin-bottom: 2.01cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+		td p { orphans: 0; widows: 0; background: transparent }
+		th p { font-weight: bold; text-align: center; orphans: 0; widows: 0; background: transparent }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="pt-BR" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+<font size="1" style="font-size: 6pt"><a href="https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all&amp;comments=1">https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all&amp;comments=1</a></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+Contar o total de clientes:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(CustomerID)
+AS &quot;Total de Clientes&quot; </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="125" cellpadding="0" cellspacing="0">
+	<col width="125"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Total
+			de Clientes</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">91</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Contar o total de clientes por país:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Country,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(CustomerID)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY Country</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY Country</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="248" cellpadding="0" cellspacing="0">
+	<col width="84"/>
+
+	<col width="164"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+		<th width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(CustomerID)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Belgium</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">9</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Denmark</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Finland</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">France</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">11</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">11</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ireland</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Italy</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mexico</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Norway</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Poland</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portugal</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Spain</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Sweden</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Switzerland</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">UK</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">7</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">13</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Venezuela</font></p>
+		</td>
+		<td width="164" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Contar o total de clientes por país e por cidade, ordenando por país
+e cidade:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Country,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(Country),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">City,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(City)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY City</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY Country, City</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="426" cellpadding="0" cellspacing="0">
+	<col width="84"/>
+
+	<col width="133"/>
+
+	<col width="102"/>
+
+	<col width="107"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+		<th width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(Country)</font></p>
+		</th>
+		<th width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(City)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buenos
+			Aires</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Graz</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Salzburg</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Belgium</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bruxelles</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Belgium</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Charleroi</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Campinas</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Resende</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rio
+			de Janeiro</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Montréal</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Tsawassen</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Vancouver</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Denmark</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">København</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Denmark</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Århus</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Contar o total de clientes por país e por cidade, filtrando cidades
+com mais de 1 cliente e ordenando por país e cidade:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Country,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(Country),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">City,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(City)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY City</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">HAVING
+COUNT(City)&gt;1</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY Country, City</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="411" cellpadding="0" cellspacing="0">
+	<col width="72"/>
+
+	<col width="133"/>
+
+	<col width="99"/>
+
+	<col width="107"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+		<th width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(Country)</font></p>
+		</th>
+		<th width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(City)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buenos
+			Aires</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rio
+			de Janeiro</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">France</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Nantes</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">France</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Paris</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mexico</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">México
+			D.F.</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portugal</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lisboa</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Spain</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Madrid</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">UK</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">London</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="72" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+		<td width="133" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+		<td width="99" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portland</font></p>
+		</td>
+		<td width="107" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Qual
+o total de funcionários?</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(EmployeeID)
+AS &quot;Total de Funcionários&quot; </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+[Employees]</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="159" cellpadding="0" cellspacing="0">
+	<col width="159"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="159" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Total
+			de Funcionários</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="159" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Multiplos
+filtros. (clientes de SP ou RJ com idade acima de 30)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Calculos
+matemáticos e estatisticos (média de idade de uma turma)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Filtros
+aproximados (pacientes que contenham joao no nome)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">multiplas
+agregações (agrupar produtos por fornecedores e transportadores)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Construção
+de consultas:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+em que tabelas estão os dados necessários?</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+você precisa de todas as linhas ou precisa de um filtro?</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">3)
+você precisa de todas as colunas ou somente de algumas?</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Consultar
+cpf e nome dos clientes do sexo feminido, com idade acima de 20 anos:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+em que tabelas estão os dados necessários? Tabela de clientes.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+você precisa de todas as linhas ou precisa de um filtro? Dois
+filtros: sexo e idade.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">3)
+você precisa de todas as colunas ou somente de algumas? Somente duas
+colunas: cpf e nome.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt"><b>Filtros
+aproximados</b></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Caracteres
+coringa</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">%
+- substitui qualquer caractere em qualquer quantidade</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">_
+- substitui um caractere qualquer (somente um!)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">[xxx]
+– alternativa, qualquer um dentro de colchetes</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">%
+é o mais utilizados</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Ex.:
+selecionar nomes de clientes que tenham ‘Madalena’ no endereço</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+nome</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+clientes</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+endereço LIKE ‘%Madalena%’</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Ex.:
+selecionar nome e cpf de alunos com 2<sup>a</sup> letra igual a ‘o’</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+* </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+alunos </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+nome LIKE ‘_o%’</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Ex.:
+selecionar nome e idade de alunos começando com M ou L</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+* </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+alunos</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+nome LIKE ‘[ML]%’</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+Países que começam com a letra a:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+Country LIKE 'A%'</font></p>
+<table width="718" cellpadding="0" cellspacing="0">
+	<col width="94"/>
+
+	<col width="140"/>
+
+	<col width="108"/>
+
+	<col width="144"/>
+
+	<col width="75"/>
+
+	<col width="84"/>
+
+	<col width="74"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerID</font></p>
+		</th>
+		<th width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerName</font></p>
+		</th>
+		<th width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ContactName</font></p>
+		</th>
+		<th width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Address</font></p>
+		</th>
+		<th width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">PostalCode</font></p>
+		</th>
+		<th width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">12</font></p>
+		</td>
+		<td width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Cactus
+			Comidas para llevar</font></p>
+		</td>
+		<td width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Patricio
+			Simpson</font></p>
+		</td>
+		<td width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Cerrito
+			333</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buenos
+			Aires</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1010</font></p>
+		</td>
+		<td width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">20</font></p>
+		</td>
+		<td width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ernst
+			Handel</font></p>
+		</td>
+		<td width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Roland
+			Mendel</font></p>
+		</td>
+		<td width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Kirchgasse
+			6</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Graz</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">8010</font></p>
+		</td>
+		<td width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">54</font></p>
+		</td>
+		<td width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Océano
+			Atlántico Ltda.</font></p>
+		</td>
+		<td width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Yvonne
+			Moncada</font></p>
+		</td>
+		<td width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ing.
+			Gustavo Moncada 8585 Piso 20-A</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buenos
+			Aires</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1010</font></p>
+		</td>
+		<td width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">59</font></p>
+		</td>
+		<td width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Piccolo
+			und mehr</font></p>
+		</td>
+		<td width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Georg
+			Pipps</font></p>
+		</td>
+		<td width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Geislweg
+			14</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Salzburg</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5020</font></p>
+		</td>
+		<td width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">64</font></p>
+		</td>
+		<td width="140" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rancho
+			grande</font></p>
+		</td>
+		<td width="108" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Sergio
+			Gutiérrez</font></p>
+		</td>
+		<td width="144" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			del Libertador 900</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buenos
+			Aires</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1010</font></p>
+		</td>
+		<td width="74" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Consultar clientes cujos países tem a na segunda letra.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+Country LIKE ‘_a%’</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="718" cellpadding="0" cellspacing="0">
+	<col width="94"/>
+
+	<col width="173"/>
+
+	<col width="113"/>
+
+	<col width="110"/>
+
+	<col width="75"/>
+
+	<col width="84"/>
+
+	<col width="68"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerID</font></p>
+		</th>
+		<th width="173" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerName</font></p>
+		</th>
+		<th width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ContactName</font></p>
+		</th>
+		<th width="110" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Address</font></p>
+		</th>
+		<th width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">PostalCode</font></p>
+		</th>
+		<th width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+		<td width="173" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bottom-Dollar
+			Marketse</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Elizabeth
+			Lincoln</font></p>
+		</td>
+		<td width="110" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">23
+			Tsawassen Blvd.</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Tsawassen</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">T2F
+			8M4</font></p>
+		</td>
+		<td width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">42</font></p>
+		</td>
+		<td width="173" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Laughing
+			Bacchus Wine Cellars</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Yoshi
+			Tannamuri</font></p>
+		</td>
+		<td width="110" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1900
+			Oak St.</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Vancouver</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">V3F
+			2K1</font></p>
+		</td>
+		<td width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">51</font></p>
+		</td>
+		<td width="173" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mère
+			Paillarde</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Jean
+			Fresnière</font></p>
+		</td>
+		<td width="110" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">43
+			rue St. Laurent</font></p>
+		</td>
+		<td width="75" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Montréal</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">H1J
+			1C3</font></p>
+		</td>
+		<td width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">3)
+Consultar os produtos que possui “Guaraná” na descrição</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Products</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+ProductName LIKE '%Guaraná%'</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="541" cellpadding="0" cellspacing="0">
+	<col width="81"/>
+
+	<col width="130"/>
+
+	<col width="84"/>
+
+	<col width="88"/>
+
+	<col width="113"/>
+
+	<col width="45"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ProductID</font></p>
+		</th>
+		<th width="130" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ProductName</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">SupplierID</font></p>
+		</th>
+		<th width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CategoryID</font></p>
+		</th>
+		<th width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Unit</font></p>
+		</th>
+		<th width="45" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Price</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24</font></p>
+		</td>
+		<td width="130" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Guaraná
+			Fantástica</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">12
+			- 355 ml cans</font></p>
+		</td>
+		<td width="45" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4.5</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">4)
+Consultar todos os clientes da cidade (city) de São Paulo e que
+tenham contato com um nome de ‘Pedro’ (tabela customers)?
+Utilizar LIKE para pesquisa aproximada.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+* </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+City = 'São Paulo' AND ContactName LIKE '%Pedro%';</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="682" cellpadding="0" cellspacing="0">
+	<col width="94"/>
+
+	<col width="125"/>
+
+	<col width="101"/>
+
+	<col width="139"/>
+
+	<col width="71"/>
+
+	<col width="84"/>
+
+	<col width="68"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerID</font></p>
+		</th>
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerName</font></p>
+		</th>
+		<th width="101" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ContactName</font></p>
+		</th>
+		<th width="139" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Address</font></p>
+		</th>
+		<th width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">PostalCode</font></p>
+		</th>
+		<th width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">15</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Comércio
+			Mineiro</font></p>
+		</td>
+		<td width="101" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Pedro
+			Afonso</font></p>
+		</td>
+		<td width="139" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			dos Lusíadas, 23</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05432-043</font></p>
+		</td>
+		<td width="68" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Funções
+matemáticas</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+Contar o número de linha considerando as linhas nulas.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(*)
+AS 'Total de Clientes'</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="125" cellpadding="0" cellspacing="0">
+	<col width="125"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Total
+			de Clientes</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">91</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Contar o número de linha <b>NÃO</b> considerando as linhas nulas.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(CustomerID)
+AS 'Total de Clientes'</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="125" cellpadding="0" cellspacing="0">
+	<col width="125"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Total
+			de Clientes</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">91</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">*Neste
+caso retornou o mesmo valor pois na coluna não tinha nenhum valor
+nulo.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">3)
+Com o DISTINCT podemos contar os valore únicos.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(DISTINCT
+Country)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="219" cellpadding="0" cellspacing="0">
+	<col width="219"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="219" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(DISTINCT
+			Country)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="219" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">21</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">4)
+AVG calcula a média da coluna selecionada</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">O
+avg ignora valores nulos para calcular a média</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MAX</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MIN</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">AVG(Price),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MAX(Price),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MIN(Price)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Products</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="327" cellpadding="0" cellspacing="0">
+	<col width="148"/>
+
+	<col width="91"/>
+
+	<col width="88"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="148" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">AVG(Price)</font></p>
+		</th>
+		<th width="91" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">MAX(Price)</font></p>
+		</th>
+		<th width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">MIN(Price)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="148" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">28.866363636363637</font></p>
+		</td>
+		<td width="91" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">263.5</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2.5</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Desvio
+Padrão</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+Qual a quantidade de clientes</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(*)
+AS 'Total de Clientes'</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="125" cellpadding="0" cellspacing="0">
+	<col width="125"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Total
+			de Clientes</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">91</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Qual é a quantidade de países na tabela clientes?</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(DISTINCT
+Country)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="219" cellpadding="0" cellspacing="0">
+	<col width="219"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="219" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(DISTINCT
+			Country)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="219" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">21</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">4)
+AVG calcula a média da coluna selecionada</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">O
+avg ignora valores nulos para calcular a média</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MAX</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MIN</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">AVG(Price),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MAX(Price),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">MIN(Price)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Products</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="327" cellpadding="0" cellspacing="0">
+	<col width="148"/>
+
+	<col width="91"/>
+
+	<col width="88"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="148" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">AVG(Price)</font></p>
+		</th>
+		<th width="91" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">MAX(Price)</font></p>
+		</th>
+		<th width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">MIN(Price)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="148" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">28.866363636363637</font></p>
+		</td>
+		<td width="91" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">263.5</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2.5</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">5)
+Consultar a quantidade de clientes de cada país. O resultado deverá
+ter o nome do país e a quantidade de clientes em ordem decrescente
+de número de clientes (tabela customers).</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+Country, Count(Country)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY Country</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY COUNT(*) DESC, Country</font></p>
+<table width="205" cellpadding="0" cellspacing="0">
+	<col width="84"/>
+
+	<col width="120"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+		<th width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Count(Country)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">13</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">France</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">11</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">11</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">9</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">UK</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">7</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mexico</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Spain</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">5</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Venezuela</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">4</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Argentina</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Canada</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Italy</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Austria</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Belgium</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Denmark</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Finland</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portugal</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Sweden</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Switzerland</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ireland</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Norway</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Poland</font></p>
+		</td>
+		<td width="120" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Comando
+DISTINCT</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">OR,
+OR, OR….. utilizar o IN</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">1)
+consultar linhas sem duplicadas</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+DISTINCT *</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY Address</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">2)
+Consultar clientes do Brazil, USA e Germany.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Customers</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERE
+Country IN ('USA','Germany','Brazil')</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">ORDER
+BY Country</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="718" cellpadding="0" cellspacing="0">
+	<col width="94"/>
+
+	<col width="137"/>
+
+	<col width="116"/>
+
+	<col width="125"/>
+
+	<col width="92"/>
+
+	<col width="84"/>
+
+	<col width="70"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerID</font></p>
+		</th>
+		<th width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerName</font></p>
+		</th>
+		<th width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ContactName</font></p>
+		</th>
+		<th width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Address</font></p>
+		</th>
+		<th width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">PostalCode</font></p>
+		</th>
+		<th width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Country</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">15</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Comércio
+			Mineiro</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Pedro
+			Afonso</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			dos Lusíadas, 23</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05432-043</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">21</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Familia
+			Arquibaldo</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Aria
+			Cruz</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rua
+			Orós, 92</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05442-030</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">31</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Gourmet
+			Lanchonetes</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">André
+			Fonseca</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			Brasil, 442</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Campinas</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">04876-786</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">34</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Hanari
+			Carnes</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mario
+			Pontes</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rua
+			do Paço, 67</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rio
+			de Janeiro</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05454-876</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">61</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Que
+			Delícia</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bernardo
+			Batista</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rua
+			da Panificadora, 12</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rio
+			de Janeiro</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">02389-673</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">62</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Queen
+			Cozinha</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lúcia
+			Carvalho</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Alameda
+			dos Canàrios, 891</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05487-020</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">67</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ricardo
+			Adocicados</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Janete
+			Limeira</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			Copacabana, 267</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rio
+			de Janeiro</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">02389-890</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">81</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Tradição
+			Hipermercados</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anabela
+			Domingues</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Av.
+			Inês de Castro, 414</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">São
+			Paulo</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">05634-030</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">88</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Wellington
+			Importadora</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Paula
+			Parente</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rua
+			do Mercado, 12</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Resende</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">08737-363</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brazil</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Alfreds
+			Futterkiste</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Maria
+			Anders</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Obere
+			Str. 57</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Berlin</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">12209</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Blauer
+			See Delikatessen</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Hanna
+			Moos</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Forsterstr.
+			57</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mannheim</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">68306</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">17</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Drachenblut
+			Delikatessend</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Sven
+			Ottlieb</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Walserweg
+			21</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Aachen</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">52066</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">25</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Frankenversand</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peter
+			Franken</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Berliner
+			Platz 43</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">München</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">80805</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">39</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Königlich
+			Essen</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Philip
+			Cramer</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Maubelstr.
+			90</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Brandenburg</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">14776</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">44</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lehmanns
+			Marktstand</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Renate
+			Messner</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Magazinweg
+			7</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Frankfurt
+			a.M.</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">60528</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">52</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Morgenstern
+			Gesundkost</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Alexander
+			Feuer</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Heerstr.
+			22</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Leipzig</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">04179</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">56</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ottilies
+			Käseladen</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Henriette
+			Pfalzheim</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mehrheimerstr.
+			369</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Köln</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">50739</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">63</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">QUICK-Stop</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Horst
+			Kloss</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Taucherstraße
+			10</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Cunewalde</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">01307</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">79</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Toms
+			Spezialitäten</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Karin
+			Josephs</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Luisenstr.
+			48</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Münster</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">44087</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">86</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Die
+			Wandernde Kuh</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rita
+			Müller</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Adenauerallee
+			900</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Stuttgart</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">70563</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Germany</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">32</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Great
+			Lakes Food Market</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Howard
+			Snyder</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2732
+			Baker Blvd.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Eugene</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">97403</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">36</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Hungry
+			Coyote Import Store</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Yoshi
+			Latimer</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">City
+			Center Plaza 516 Main St.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Elgin</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">97827</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">43</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lazy
+			K Kountry Store</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">John
+			Steel</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">12
+			Orchestra Terrace</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Walla
+			Walla</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">99362</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">45</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Let's
+			Stop N Shop</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Jaime
+			Yorres</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">87
+			Polk St. Suite 5</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">San
+			Francisco</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">94117</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">48</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lonesome
+			Pine Restaurant</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fran
+			Wilson</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">89
+			Chiaroscuro Rd.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portland</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">97219</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">55</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Old
+			World Delicatessen</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rene
+			Phillips</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2743
+			Bering St.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anchorage</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">99508</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">65</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Rattlesnake
+			Canyon Grocery</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Paula
+			Wilson</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2817
+			Milton Dr.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Albuquerque</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">87110</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">71</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Save-a-lot
+			Markets</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Jose
+			Pavarotti</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">187
+			Suffolk Ln.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Boise</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">83720</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">75</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Split
+			Rail Beer &amp; Ale</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Art
+			Braunschweiger</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">P.O.
+			Box 555</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Lander</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">82520</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">77</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">The
+			Big Cheese</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Liz
+			Nixon</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">89
+			Jefferson Way Suite 2</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Portland</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">97201</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">78</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">The
+			Cracker Box</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Liu
+			Wong</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">55
+			Grizzly Peak Rd.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Butte</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">59801</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">82</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Trail's
+			Head Gourmet Provisioners</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Helvetius
+			Nagy</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">722
+			DaVinci Blvd.</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Kirkland</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">98034</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="94" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">89</font></p>
+		</td>
+		<td width="137" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">White
+			Clover Markets</font></p>
+		</td>
+		<td width="116" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Karl
+			Jablonski</font></p>
+		</td>
+		<td width="125" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">305
+			- 14th Ave. S. Suite 3B</font></p>
+		</td>
+		<td width="92" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Seattle</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">98128</font></p>
+		</td>
+		<td width="70" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">USA</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt"><b>Junção</b></font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Entender
+que existe uma correlação semantica que junta parte de uma tabela
+em outra referenciada por um campo especifico.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+tabela1 JOIN tabela2 ON tabela1.id_x = tabela2.id_y</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Exemplo:</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Consultar
+o nome de todos os produtos e quantidades em todas as compras
+registradas</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">01)
+em que tabelas estão os dados necessários? Tabela compras e
+produtos.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">02)
+você precisa de todas as linhas ou precisa de um filtro? Quero todas
+as linhas, não tem filtro.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">03)
+você precisa de todas as colunas ou somente de algumas? Só duas
+colunas: nome do produto e a quantidade.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+produtos.nome, compras.quantidade</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+compras JOIN produtos ON compras.id_produto = produtos.id</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--
+perceba que o nome da coluna tem prefixo agora!</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--
+como podemos ter colunas de mesmo nome em tabelas diferentes</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--
+é importante sempre indicar a tabela à qual a coluna pertence</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Agora
+o nome dos produtos para cada compra registrada no nome do cliente
+“Leoncio”.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+com tres tabelas.</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+produtos.nome, compras.quantidade</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+compras </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+produtos ON compras.id_produtos = produtos.id</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+clientes ON compras.id_cliente = clientes.id</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WHERES
+clientes.nome = “Leoncio”</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">OrderDetails.OrderDetailID,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">OrderDetails.OrderID,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">OrderDetails.ProductID,
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Products.ProductName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+OrderDetails </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+Products ON OrderDetails.ProductID = Products.ProductID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JUNÇÃO</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Customers.CustomerName,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">OrderDetails.Quantity</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Orders</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+OrderDetails ON Orders.OrderID = OrderDetails.OrderID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+Customers ON Orders.CustomerID = Customers.CustomerID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY Customers.CustomerName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="314" cellpadding="0" cellspacing="0">
+	<col width="242"/>
+
+	<col width="71"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CustomerName</font></p>
+		</th>
+		<th width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Quantity</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ana
+			Trujillo Emparedados y helados</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Antonio
+			Moreno Taquería</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Around
+			the Horn</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">25</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">B's
+			Beverages</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">30</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Berglunds
+			snabbköp</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">16</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Blondel
+			père et fils</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">30</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bon
+			app'</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">15</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bottom-Dollar
+			Marketse</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">16</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Bólido
+			Comidas preparadas</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Centro
+			comercial Moctezuma</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Chop-suey
+			Chinese</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">15</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Comércio
+			Mineiro</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">20</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Consolidated
+			Holdings</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Die
+			Wandernde Kuh</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Drachenblut
+			Delikatessend</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">20</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Du
+			monde entier</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Eastern
+			Connection</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">30</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ernst
+			Handel</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">50</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Familia
+			Arquibaldo</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Folies
+			gourmandes</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Folk
+			och fä HB</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">35</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Franchi
+			S.p.A.</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Frankenversand</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">50</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Furia
+			Bacalhau e Frutos do Mar</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">9</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="242" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">GROSELLA-Restaurante</font></p>
+		</td>
+		<td width="71" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">INNER
+JOIN = TRAZ SOMENTE AS INTERSECÇÃO</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">LEFT
+JOIN = TRAZ TODOS, INDEPENDENTE SE TIVER ZERO</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Consultar
+os números das ordens, primeiros e últimos nomes dos empregados que
+fizeram cada ordem (tabelas Employees e Orders)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+Orders.OrderID, Employees.FirstName, Employees.LastName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Orders</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">INNER
+JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="229" cellpadding="0" cellspacing="0">
+	<col width="69"/>
+
+	<col width="80"/>
+
+	<col width="81"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">OrderID</font></p>
+		</th>
+		<th width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">FirstName</font></p>
+		</th>
+		<th width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">LastName</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10248</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Steven</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buchanan</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10249</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Michael</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Suyama</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10250</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peacock</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10251</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Janet</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Leverling</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10252</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peacock</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10253</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Janet</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Leverling</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10254</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Steven</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Buchanan</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10255</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anne</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Dodsworth</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10256</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Janet</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Leverling</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10257</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peacock</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10258</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Nancy</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Davolio</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10259</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peacock</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10260</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Peacock</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--Consultar
+os nomes dos produtos e suas respectivas categorias (tabelas Products
+e Categories)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Products.ProductName,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Categories.CategoryName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Products</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">LEFT
+JOIN Categories ON Products.CategoryID = Categories.CategoryID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="351" cellpadding="0" cellspacing="0">
+	<col width="238"/>
+
+	<col width="113"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ProductName</font></p>
+		</th>
+		<th width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CategoryName</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Chais</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Beverages</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Chang</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Beverages</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Aniseed
+			Syrup</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Chef
+			Anton's Cajun Seasoning</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Chef
+			Anton's Gumbo Mix</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Grandma's
+			Boysenberry Spread</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Uncle
+			Bob's Organic Dried Pears</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Produce</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Northwoods
+			Cranberry Sauce</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Mishi
+			Kobe Niku</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Meat/Poultry</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Ikura</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Seafood</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Queso
+			Cabrales</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Dairy
+			Products</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Queso
+			Manchego La Pastora</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Dairy
+			Products</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Konbu</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Seafood</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Tofu</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Produce</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Genen
+			Shouyu</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Condiments</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Pavlova</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Confections</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="238" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Alice
+			Mutton</font></p>
+		</td>
+		<td width="113" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Meat/Poultry</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--Consultar
+os ids das ordens com os nomes e telefones dos transportadores
+(tabela Orders e Shippers)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Orders.OrderID,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Shippers.ShipperName,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Shippers.Phone</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Orders</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">LEFT
+JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--Consultar
+quantidade de ordens de cada um dos empregados. O resultado deve ter
+o nome do empregado e a quantidade de ordens. Mesmo os empregados que
+não tem ordens devem estar no resultado (tabelas Orders e Employee)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Employees.FirstName,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">COUNT(Orders.OrderID)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Employees </font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">LEFT
+JOIN Orders On Employees.EmployeeID = Orders.EmployeeID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">GROUP
+BY Employees.FirstName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="272" cellpadding="0" cellspacing="0">
+	<col width="81"/>
+
+	<col width="192"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">FirstName</font></p>
+		</th>
+		<th width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">COUNT(Orders.OrderID)</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Adam</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">0</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">20</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anne</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Janet</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">31</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Laura</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">27</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Margaret</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">40</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Michael</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">18</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Nancy</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">29</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Robert</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">14</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Steven</font></p>
+		</td>
+		<td width="192" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">11</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--
+Consultar os números de ordens, primeiros e últimos nomes dos
+empregados que tenham &quot;A&quot; como primeira letra do nome.
+Utilizar subconsulta como tabela de empregados com letra A (tabelas
+Employees e Orders)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">Orders.OrderID,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">empregados_com_a.FirstName,</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">empregados_com_a.LastName</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+Orders</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JOIN
+(SELECT * FROM Employees WHERE FirstName LIKE 'A%') AS
+empregados_com_a ON Orders.EmployeeID = empregados_com_a.EmployeeID</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="229" cellpadding="0" cellspacing="0">
+	<col width="69"/>
+
+	<col width="80"/>
+
+	<col width="81"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">OrderID</font></p>
+		</th>
+		<th width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">FirstName</font></p>
+		</th>
+		<th width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">LastName</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10255</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anne</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Dodsworth</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10263</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Anne</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Dodsworth</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10265</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fuller</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10277</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fuller</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10280</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fuller</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10295</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fuller</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="69" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10300</font></p>
+		</td>
+		<td width="80" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Andrew</font></p>
+		</td>
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Fuller</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">JUNÇÃO
+É COM COLUNA</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">UNIAO
+É COM LINHA</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">--
+Consultar os números de ordens, primeiros e últimos nomes dos
+empregados que tenham &quot;A&quot; como primeira letra do nome.
+Utilizar subconsulta como tabela de empregados com letra F (tabelas
+Employees e Orders)</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">WITH
+</font>
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">empregados_com_A
+AS (SELECT * FROM Employees WHERE FirstName LIKE 'A%'),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">produtos_com_A
+AS (SELECT * FROM Products WHERE ProductName LIKE 'A%'),</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">produtos_com_P
+AS (SELECT * FROM Products WHERE ProductName LIKE 'P%')</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+produtos_com_A</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">UNION</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">SELECT
+*</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><font size="1" style="font-size: 6pt">FROM
+produtos_com_P;</font></p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<table width="527" cellpadding="0" cellspacing="0">
+	<col width="81"/>
+
+	<col width="102"/>
+
+	<col width="84"/>
+
+	<col width="88"/>
+
+	<col width="127"/>
+
+	<col width="46"/>
+
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<th width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ProductID</font></p>
+		</th>
+		<th width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">ProductName</font></p>
+		</th>
+		<th width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">SupplierID</font></p>
+		</th>
+		<th width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">CategoryID</font></p>
+		</th>
+		<th width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Unit</font></p>
+		</th>
+		<th width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Price</font></p>
+		</th>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Aniseed
+			Syrup</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">1</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">2</font></p>
+		</td>
+		<td width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">12
+			- 550 ml bottles</font></p>
+		</td>
+		<td width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">10</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">16</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Pavlova</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">7</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">3</font></p>
+		</td>
+		<td width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">32
+			- 500 g boxes</font></p>
+		</td>
+		<td width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">17.45</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">17</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Alice
+			Mutton</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">7</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+		<td width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">20
+			- 1 kg tins</font></p>
+		</td>
+		<td width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">39</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffff" style="background: #ffffff">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">53</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Perth
+			Pasties</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+		<td width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">48
+			pieces</font></p>
+		</td>
+		<td width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">32.8</font></p>
+		</td>
+	</tr>
+	<tr bgcolor="#e7e9eb" style="background: #e7e9eb">
+		<td width="81" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">55</font></p>
+		</td>
+		<td width="102" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">Pâté
+			chinois</font></p>
+		</td>
+		<td width="84" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">25</font></p>
+		</td>
+		<td width="88" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">6</font></p>
+		</td>
+		<td width="127" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24
+			boxes x 2 pies</font></p>
+		</td>
+		<td width="46" style="border: none; padding: 0cm"><p align="left"><font size="1" style="font-size: 6pt">24</font></p>
+		</td>
+	</tr>
+</table>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-right: -0.4cm; margin-bottom: 0cm; background: transparent; page-break-before: auto">
+<font size="1" style="font-size: 6pt">CREATE TABLE empregados_com_a
+AS</font></p>
+<p style="line-height: 100%; margin-right: -0.4cm; margin-bottom: 0cm; background: transparent">
+<font size="1" style="font-size: 6pt">SELECT *</font></p>
+<p style="line-height: 100%; margin-right: -0.4cm; margin-bottom: 0cm; background: transparent">
+<font size="1" style="font-size: 6pt">FROM Employees</font></p>
+<p style="line-height: 100%; margin-right: -0.4cm; margin-bottom: 0cm; background: transparent">
+<font size="1" style="font-size: 6pt">WHERE FirstName LIKE 'A%'</font></p>
+</body>
+</html>
